@@ -14,7 +14,7 @@ public class DBConnect {
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
 			DriverManager.registerDriver(new com.mysql.jdbc.Driver());
-			con = DriverManager.getConnection("jdbc:mysql://localhost:3306/student_info", "root", "");
+			con = DriverManager.getConnection("jdbc:mysql://localhost:3306/student_info", "root", "password");
 			st = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
 		} catch (Exception e) {
 			System.out.println("Error: " + e);
